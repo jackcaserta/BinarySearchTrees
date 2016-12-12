@@ -35,8 +35,8 @@ public class BinarySearchTrees {
     return false;
    }
   }
-  //if i am here that means we have found the node
-  //Case 1: if node to be deleted has no children
+  //Found the node
+  //Case 1: node deleted if no children
   if(current.left==null && current.right==null){
    if(current==root){
     root = null;
@@ -47,7 +47,7 @@ public class BinarySearchTrees {
     parent.right = null;
    }
   }
-  //Case 2 : if node to be deleted has only one child
+  //Case 2 : node deleted has one child
   else if(current.right==null){
    if(current==root){
     root = current.left;
@@ -67,7 +67,7 @@ public class BinarySearchTrees {
    }
   }else if(current.left!=null && current.right!=null){
    
-   //now we have found the minimum element in the right sub tree
+   //minimum element in the sub tree
    Node successor  = getSuccessor(current);
    if(current==root){
     root = successor;
@@ -90,9 +90,9 @@ public class BinarySearchTrees {
    successsor = current;
    current = current.left;
   }
-  //check if successor has the right child, it cannot have left child for sure
-  // if it does have the right child, add it to the left of successorParent.
-//  successsorParent
+  //successor has right child
+  //add to left of successor
+
   if(successsor!=deleleNode.right){
    successsorParent.left = successsor.right;
    successsor.right = deleleNode.right;
