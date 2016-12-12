@@ -1,3 +1,6 @@
+//Jack Caserta
+//CSI 213
+//Magnus
 
 public class BinarySearchTrees {
  public static  Node root;
